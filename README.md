@@ -16,7 +16,7 @@
     b. *To reduce the image size, use the CPU version of torch & torchvision packages. (reduces to 1.09GB from 2.5GB) *
     c. Remove the cache and requirements.txt after installing the packages.
 7. Update the makefile with docker build. Build docker image using docker build --tag <imagename>.
-8. Now docker run using docke run --it -v `pwd`: workspace/project <imagename> bash to mount the host in the docker container. This step is essential when logs are generated it is usually within the docker container, when we mount, it gets saved in the host system as well.
+8. Now docker run using docker run -it -v `pwd`: workspace/project <imagename> bash to mount the host in the docker container. This step is essential when logs are generated it is usually within the docker container, when we mount, it gets saved in the host system as well.
 9. Now python3 src/train.py and it automatically evaluates as well since it is a pretrained model.
 
 
